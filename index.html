@@ -24,10 +24,39 @@
         element: document.getElementById('container'),
         scope: 'can',
         geographyConfig: {
-            dataJson: Datamap.canTopo
+            dataJson: Datamap.canTopo,
+            popupOnHover: true, // True to show the popup while hovering
+            highlightOnHover: true,
+            highlightFillColor: '#FC8D59',
+            highlightBorderColor: 'rgba(250, 15, 160, 0.2)',
+            highlightBorderWidth: 2,
+            highlightBorderOpacity: 1,
+            highlightFillOpacity: 0.55,
         },
         fills: {
-         defaultFill: '#ABDDA4' // The keys in this object map to the "fillKey" of [data] or [bubbles]
+    defaultFill: '#ABDDA4',
+    USA: 'blue',
+    CAN: 'red'
+  },
+        bubblesConfig: {
+            borderWidth: 2,
+            borderOpacity: 1,
+            borderColor: '#FFFFFF',
+            popupOnHover: true, // True to show the popup while hovering
+            radius: null,
+            // popupTemplate: function(geography, data) { // This function should just return a string
+            //   return '<div class="hoverinfo"><strong>' + data.name + '</strong></div>';
+            // },
+            fillOpacity: 0.75,
+            animate: true,
+            highlightOnHover: true,
+            highlightFillColor: '#FC8D59',
+            highlightBorderColor: 'rgba(250, 15, 160, 0.2)',
+            highlightBorderWidth: 2,
+            highlightBorderOpacity: 1,
+            highlightFillOpacity: 0.85,
+            exitDelay: 100, // Milliseconds
+            key: JSON.stringify
         },
 		setProjection: function(element) {
 			var projection = d3.geo.mercator()
@@ -38,8 +67,34 @@
 			return {path: path, projection: projection};
 		}
 	});
-
-
+map.bubbles([
+  {
+    name: 'Saint Johns',
+    radius: 15,
+    country: 'CAN',
+    details: 'First event on the tour',
+    location: 'St. Johns, Newfoundland',
+    fillKey: 'CAN',
+    date: 'April 24, 2017',
+    latitude: 47.5615,
+    longitude: -52.7126
+  },{
+    name: 'Jordan Ontario',
+    radius: 15,
+    country: 'CAN',
+    details: 'First event on the tour',
+    location: 'Jordan, Ontario',
+    fillKey: 'USA',
+    date: 'April 24, 2017',
+    latitude: 43.1379996,
+    longitude: -79.4040305
+  }
+], {
+  popupTemplate: function(geo, data) {
+    return '<div class="hoverinfo">Location: ' + data.location + '<br>Date: ' + data.date + '</div>';
+  }
+});
+// );
      
 </script>
 
