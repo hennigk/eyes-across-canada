@@ -24,6 +24,14 @@ h6 {
 .topnav {
     font-size: 14px; 
 }
+.navbar-default .navbar-nav>li>a,
+.navbar-brand.topnav{
+    color: #E53935;
+}
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-brand.topnav:hover{
+    color: #B71C1C;
+}
 
 .lead {
     font-size: 18px;
@@ -59,12 +67,11 @@ h6 {
 
 .intro-message h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    color: red;
     text-transform: uppercase;
 }
 
 .intro-message .red {
-    color: red;
+    color: #E53935;
 }
 .intro-message .white {
     color: #f8f8f8;
@@ -124,7 +131,7 @@ h6 {
 .banner {
     padding: 100px 0;
     color: #f8f8f8;
-    background: url(../img/banner-bg.jpg) no-repeat center center;
+    background: url(../img/toronto-bg.jpg) no-repeat center center;
     background-size: cover;
 }
 
