@@ -19,6 +19,7 @@ h5,
 h6 {
     font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+    color: #444;
 }
 
 .topnav {
@@ -28,14 +29,17 @@ h6 {
 .navbar-brand.topnav{
     color: #E53935;
 }
-.navbar-default .navbar-nav>li>a:hover,
-.navbar-brand.topnav:hover{
+.navbar-default .navbar-brand:focus, 
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-nav>li>a:hover{
     color: #B71C1C;
 }
+
 
 .lead {
     font-size: 18px;
     font-weight: 400;
+    color: #666;
 }
 
 .intro-header {
@@ -57,6 +61,7 @@ h6 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
+    color: #f8f8f8;
 }
 
 .intro-divider {
@@ -68,14 +73,74 @@ h6 {
 .intro-message h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     text-transform: uppercase;
-}
-
-.intro-message .red {
-    color: #E53935;
-}
-.intro-message .white {
     color: #f8f8f8;
 }
+.intro-text {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding-bottom: 30px;
+}
+.question-text{
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    color: #444;
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+.answer-text {
+    font-size: 18px;
+    font-weight: 400;
+    color: #666;
+}
+.section-text {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.red {
+    color: #E53935;
+}
+.white {
+    color: #f8f8f8;
+}
+/*about page*/
+.about {
+    margin-top: 51px;
+}
+.about > .hero-banner{
+    background-color: #0a2610; 
+}
+.about .jumbotron{
+    background: #0a2610 url(../img/your-eyes-are-worth-it.jpg) no-repeat 100% 50%;
+    background-size: contain;
+    margin: auto;
+    padding-left: 0px;
+
+}
+
+.about .header {
+    color: #f8f8f8;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+.img-border {
+    float: none;
+    margin: 0 auto 0;
+    border: #999999 solid 1px;
+}
+
+.img-left {
+    float: none;
+    margin: 0 auto 0;
+}
+.about hr {
+    max-width: 400px;
+    border-color: #999999;
+}
+
 @media(max-width:767px) {
     .intro-message {
         padding-bottom: 15%;
@@ -111,7 +176,10 @@ h6 {
     padding: 50px 0;
     background-color: #f8f8f8;
 }
-
+.box {
+    padding: 50px 0;  
+    border-bottom: 1px solid #e7e7e7;
+}
 .content-section-b {
     padding: 50px 0;
     border-top: 1px solid #e7e7e7;
