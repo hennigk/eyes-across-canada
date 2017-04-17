@@ -188,7 +188,10 @@ footer a:hover{
     padding-left: 0px;
     min-height: 200px;
 }
-
+/*contact*/
+.contact iframe{
+    max-width: 100%;
+}
 
 
 @media(max-width:767px) {
@@ -229,6 +232,12 @@ footer a:hover{
 .box {
     padding: 50px 0;  
     border-bottom: 1px solid #e7e7e7;
+}
+.home-events {
+    padding-bottom: 64px;
+}
+.home-events h2{
+    margin-top: 0px;
 }
 .content-section-b {
     padding: 50px 0;
